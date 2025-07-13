@@ -1,0 +1,42 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+// explicitly only for left hand side for gaming use
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer { // Layer 0
+            // -------------------------------------
+            // |    F24    |    ESC    |     1     |     2     |     3     |     4     |     5     |           | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+            // |    F23    |    TAB    |     Q     |     W     |     E     |     R     |     T     |           | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+            // |    F22    |   LSHFT   |     A     |     S     |     D     |     F     |     G     |           | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+            // |    F21    |   LCTRL   |     Z     |     X     |     C     |     V     |     B     |           | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+            // |    MO1    |    LGUI   |    RGUI   |    BSPC   |    RALT   | |    LALT   |    SPC    |       | --------- | --------- | | --------- | --------- | --------- | --------- | --------- |
+            bindings = <
+                &kp F24   &kp ESC   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5             &none     &none     &none     &none     &none     &none     &none
+                &kp F23   &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T              &none     &none     &none     &none     &none     &none     &none
+                &kp F22   &kp LSHFT &kp A     &kp S     &kp D     &kp F     &kp G              &none     &none     &none     &none     &none     &none     &none
+                &kp F21   &kp LCTRL &kp Z     &kp X     &kp C     &kp V     &kp B              &none     &none     &none     &none     &none     &none     &none
+                &mo 1     &kp LGUI  &kp RGUI  &kp BSPC  &kp RALT  &kp LALT  &kp SPACE          &none     &none     &none     &none     &none     &none     &none
+            >;
+        };
+
+        alternate { // Layer 1
+        // -------------------------------------
+            // |    F20    |   trans   |     6     |     7     |     8     |     9     |     0     |           | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+            // |    F19    |   trans   |     Y     |     U     |     I     |     O     |     P     |           | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+            // |    F18    |   trans   |     H     |     J     |     K     |     L     |     ;     |           | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+            // |    F17    |   trans   |     N     |     M     |     ,     |     .     |     /     |           | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+            // |   trans   |   trans   |   trans   |    ENT    |   trans   | |   trans   |   trans   |       | --------- | --------- | | --------- | --------- | --------- | --------- | --------- |
+            bindings = <
+                &kp F20   &trans    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0             &none     &none     &none     &none     &none     &none     &none
+                &kp F19   &trans    &kp Y     &kp U     &kp I     &kp O     &kp P              &none     &none     &none     &none     &none     &none     &none
+                &kp F18   &trans    &kp H     &kp J     &kp K     &kp L     &kp SEMI           &none     &none     &none     &none     &none     &none     &none
+                &kp F17   &trans    &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH           &none     &none     &none     &none     &none     &none     &none
+                &trans    &trans    &trans    &kp RET   &trans    &trans    &trans             &none     &none     &none     &none     &none     &none     &none
+            >;
+        };
+    };
+ };
